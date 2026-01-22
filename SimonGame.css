@@ -1,0 +1,138 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #222e39;
+    color: #f8fafc;
+}
+
+/* Headings */
+h1 {
+    margin-top: 30px;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    opacity: 0.85;
+}
+
+/* Button container */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Rows */
+.line-1,
+.line-2 {
+    display: flex;
+}
+
+/* Game buttons */
+.btn {
+    height: 200px;
+    width: 200px;
+    border-radius: 30px;
+    margin: 20px;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.35),
+        inset 0 -6px 0 rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        filter 0.15s ease;
+}
+
+/* Hover effect */
+.btn:hover {
+    transform: translateY(-6px);
+    filter: brightness(1.1);
+}
+
+/* Click effect */
+.btn:active {
+    transform: translateY(2px) scale(0.97);
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.35),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Button colors */
+.one {
+    background: linear-gradient(145deg, #e86b8c, #c8446a);
+}
+
+.two {
+    background: linear-gradient(145deg, #ffb05c, #e18428);
+}
+
+.three {
+    background: linear-gradient(145deg, #9bb3ff, #6b87e5);
+}
+
+.four {
+    background: linear-gradient(145deg, #7bc1d6, #4e9db5);
+}
+
+/* Flash animation (Simon sequence) */
+.flash {
+    animation: flashEffect 0.25s ease;
+}
+
+@keyframes flashEffect {
+    0% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.6);
+    }
+    100% {
+        filter: brightness(1);
+    }
+}
+
+/* Game over shake (optional class) */
+.game-over {
+    animation: shake 0.4s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+@media (max-width: 576px) {
+    .btn {
+        height: 140px;
+        width: 140px;
+        margin: 12px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+}
