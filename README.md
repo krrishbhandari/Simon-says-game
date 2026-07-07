@@ -43,3 +43,4 @@ A fun memory game built using **HTML, CSS, and JavaScript**. The game generates 
 ## 📜 License
 
 This project is open-source and available for learning and personal use.
+Deveopled by krish
